@@ -1,0 +1,27 @@
+.navigation-content {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 66px;
+
+  height: 66px;
+  border-radius: 20px 20px 0 0;
+  background: #fbfbfb;
+  box-shadow: 0 -4px 10px 0 rgba(0, 0, 0, 0.06);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  z-index: 1;
+}
+
+.bi-house-door::before {
+  color: #000;
+}
+
+.home,
+.list,
+.roulette {
+  font-size: 30px;
+}
