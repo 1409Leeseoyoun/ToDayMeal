@@ -1,0 +1,35 @@
+.today-list-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 340px;
+}
+
+.today-meals {
+  font-size: 16px;
+  font-weight: bolder;
+  color: #000;
+  margin: 0;
+}
+
+.today-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.empty-content {
+  border-radius: 20px;
+  border: 3px dashed #d5d5d5;
+  width: 340px;
+  height: 79px;
+
+  display: grid;
+  place-items: center;
+}
+
+.bi-plus-circle-fill::before {
+  color: #ff9f4a;
+  font-size: 36px;
+}
