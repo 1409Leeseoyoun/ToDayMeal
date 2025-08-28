@@ -1,0 +1,56 @@
+.calendar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.calendar-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.current-month {
+  font-size: 18px;
+  color: #000;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.prev-month,
+.next-month {
+  font-size: 14px;
+  margin: 0;
+  color: #000;
+}
+
+.week-content {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+}
+
+.day {
+  font-size: 15px;
+  margin: 0;
+  color: #000;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 29px;
+  row-gap: 25px;
+}
+
+.date {
+  text-align: center;
+  margin: 0;
+  color: #000;
+  font-size: 18px;
+}
+
+.date.today {
+  font-weight: bolder;
+  text-decoration: underline;
+}
