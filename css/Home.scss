@@ -1,0 +1,51 @@
+body {
+  height: 100%;
+  margin: 0;
+
+  background-color: #fff;
+}
+
+.home-container {
+  height: 100vh;
+  width: 100vw;
+  padding: 52px 0 66px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-image {
+  width: 98px;
+  height: auto;
+}
+
+.calendar-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.current-month {
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+  margin: 0;
+}
+
+.prev-month, .next-month {
+  font-size: 14px;
+  margin: 0;
+  color: #000;
+}
+
+.week-content {
+  display: flex;
+  gap: 35px;
+}
+
+.day {
+  font-size: 15px;
+  margin: 0;
+  color: #000;
+}
