@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { createContext, useContext, useState } from "react";
 
 import "../css/Home.scss";
 import Logo from "../src/assets/logo.png";
@@ -7,8 +8,11 @@ import Calendar from "../components/Calendar";
 import TodayList from "../components/TodayList";
 import BottomNavigation from "../components/BottomNavigation";
 
+export const ThemeContext = createContext(null);
+
 function Home() {
   const path = useLocation();
+  const [addMenu, setAddMenu] = useState()
 
   return (
     <>
