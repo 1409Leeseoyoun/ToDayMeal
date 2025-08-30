@@ -49,13 +49,15 @@ function Calendar() {
         {contents.map((d, i) => {
           const isToday = currentMonth && d === today.getDate();
           return (
-            <p
-              key={i}
-              className={`date${isToday ? " today" : ""}${d ? "" : " blank"}`}
-              aria-label={d ? `${year}-${month + 1}-${d}` : undefined}
-            >
-              {d ?? ""}
-            </p>
+            <div className="date-content">
+              <p
+                key={i}
+                className={`date${isToday ? " today" : ""}${d ? "" : " blank"}`}
+                aria-label={d ? `${year}-${month + 1}-${d}` : undefined}
+              >
+                {d ?? ""}
+              </p>
+            </div>
           );
         })}
       </div>
