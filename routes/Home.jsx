@@ -1,18 +1,18 @@
 import { useLocation } from "react-router-dom";
-import { createContext, useContext, useState } from "react";
+import { useState } from "react";
 
 import "../css/Home.scss";
-import Logo from "../src/assets/logo.png";
+
+import AddMenuContext from "../contexts/AddMenuContext";
 
 import Calendar from "../components/Calendar";
 import TodayList from "../components/TodayList";
 import BottomNavigation from "../components/BottomNavigation";
-
-export const ThemeContext = createContext(null);
+import AddTodayMeal from "../components/AddTodayMeal";
 
 function Home() {
   const path = useLocation();
-  const [addMenu, setAddMenu] = useState()
+  const [addMenu, setAddMenu] = useState(false);
 
   return (
     <>
@@ -20,8 +20,8 @@ function Home() {
         <div className="logo-content">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="99"
-            height="23"
+            width="120"
+            height="44"
             viewBox="0 0 99 23"
             fill="none"
           >
@@ -44,9 +44,16 @@ function Home() {
           </svg>
         </div>
         <Calendar />
-        <TodayList />
+        <AddMenuContext.Provider value={setAddMenu}>
+          <TodayList />
+        </AddMenuContext.Provider>
       </div>
       <BottomNavigation path={path.pathname} />
+      {addMenu && (
+        <AddMenuContext.Provider value={setAddMenu}>
+          <AddTodayMeal />
+        </AddMenuContext.Provider>
+      )}
     </>
   );
 }
