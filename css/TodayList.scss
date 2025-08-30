@@ -6,9 +6,12 @@
 }
 
 .today-meals {
+  font-family: Inter;
   font-size: 16px;
-  font-weight: bolder;
+  font-style: normal;
+  font-weight: 700;
   color: #000;
+
   margin: 0;
 }
 
@@ -31,7 +34,7 @@
 
 .bi-plus-circle-fill::before {
   color: #ff9f4a;
-  font-size: 36px;
+  font-size: 33px;
 }
 
 .puls {
